@@ -58,6 +58,7 @@ textarea#editor {
   padding-left: 5px;
   padding-top: 5px;
   background-color: var(--seconday-bg-color);
+  resize: vertical;
 }
 .preview-container {
   width: 900px;

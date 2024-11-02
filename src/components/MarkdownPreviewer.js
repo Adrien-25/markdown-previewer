@@ -66,13 +66,11 @@ const MarkdownPreviewer = () => {
   - Voici un élément
   - Un autre élément
      - Et un sous-élément pour varier
-  - On peut aussi ajouter autant d'éléments qu'on veut
   
   Les listes ordonnées :
   1. Premier élément
   2. Deuxième élément
-  3. Troisième élément
-     1. Sous-élément pour le troisième
+     1. Sous-élément pour le deuxième
   
   ---
   
@@ -85,49 +83,6 @@ const MarkdownPreviewer = () => {
   | Alice     | 25  | Paris          |
   | Bob       | 30  | Lyon           |
   | Charly    | 35  | Marseille      |
-  
-  Et on peut aussi aligner le texte dans les colonnes avec des \`:\` :
-  | Aligné à gauche | Centré       | Aligné à droite |
-  |:--------------- |:------------:| ---------------:|
-  | Texte à gauche  | Texte centré | Texte à droite  |
-  
-  ---
-  
-  ## Images
-  
-  Pour intégrer une image, c'est aussi facile que les liens :
-  
-  ![Chat mignon](https://placekitten.com/200/200)
-  
-  ---
-  
-  ## Séparateurs de section
-  
-  On peut ajouter des séparateurs de section avec trois tirets (ou astérisques) :
-  
-  ---
-  
-  ou
-  
-  ***
-  
-  ---
-  
-  ### Exemple Complet
-  
-  Enfin, voici un exemple qui utilise un peu de tout :
-  
-  - Un **lien** vers une [ressource utile](https://developer.mozilla.org/fr/).
-  - Du _texte en italique_ et même ~~barré~~.
-  - Une citation inspirante :
-  
-  > "Markdown rend la vie facile et élégante."
-  
-  1. Des listes ordonnées
-  2. Avec des sous-listes
-     - Et même des sous-sous-listes !
-  
-  Et voilà ! Vous êtes maintenant **expert en Markdown** ! 🎉 
   
   ---
   
