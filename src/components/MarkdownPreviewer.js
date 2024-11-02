@@ -3,9 +3,8 @@ import { marked } from "marked";
 import "../App.css";
 
 const MarkdownPreviewer = () => {
-  // Default Markdown for initial load (meets User Story #5)
   const defaultMarkdown = `
-  # Bienvenue dans ce Guide Complet de Markdown ! 🚀
+  # Aperçu de Markdown ! 🚀
   
   ## Un tour d'horizon complet de toutes les fonctionnalités :
   
@@ -137,28 +136,54 @@ const MarkdownPreviewer = () => {
 
   const [markdown, setMarkdown] = useState(defaultMarkdown);
 
-  // Update preview as markdown changes (meets User Story #3 and #4)
   const handleChange = (e) => {
     setMarkdown(e.target.value);
   };
 
-  // Set options for Marked (optional: interpret line breaks as <br> elements)
   marked.setOptions({
     breaks: true,
   });
 
+  const MarkdownIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+      height="30px"
+      width="30px"
+      id="Layer_1"
+      data-name="Layer 1"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M14.25,3H1.75A.74027.74027,0,0,0,1,3.73016v8.53968A.74029.74029,0,0,0,1.75,13h12.5a.74029.74029,0,0,0,.75-.73016V3.73016A.74027.74027,0,0,0,14.25,3ZM7.965,10.059H6.97374V7.77311L5.9825,9.34956,4.99125,7.77311V10.059H4V5.934h.91L5.9825,7.51038,7.055,5.934h.91Zm2.45884.0071L8.84766,7.94479H9.94749V5.934h.99124V7.94479H12Z"
+      />
+    </svg>
+  );
+
   return (
     <div className="markdown-previewer">
-      <textarea
-        id="editor"
-        value={markdown}
-        onChange={handleChange}
-        placeholder="Enter Markdown here..."
-      />
-      <div
-        id="preview"
-        dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-      />
+      <div className="editor-container">
+        <div className="toolbar">
+          <MarkdownIcon />
+          Aperçu
+        </div>
+        <textarea
+          id="editor"
+          value={markdown}
+          onChange={handleChange}
+          placeholder="Entrez le Markdown ici..."
+        />
+      </div>
+      <div className="preview-container">
+        <div className="toolbar">
+          <MarkdownIcon />
+          Éditeur
+        </div>
+        <div
+          id="preview"
+          dangerouslySetInnerHTML={{ __html: marked(markdown) }}
+        />
+      </div>
     </div>
   );
 };

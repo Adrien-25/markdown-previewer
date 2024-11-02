@@ -1,27 +1,133 @@
+:root {
+  --primary-color: #432818;
+  --secondary-color: #bb9457;
+  --primary-bg-color: #6f1d1b;
+  --seconday-bg-color: #ffe6a7;
+  --text-color: #99582a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  padding-left: 1em; /* Ajustez l'espace à gauche */
+  list-style-position: inside; /* Positionne les puces à l'intérieur */
+}
+.App {
+  background-color: var(--secondary-color);
+}
 .markdown-previewer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  margin: auto;
+  gap: 10px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--primary-color);
+  color: var(--seconday-bg-color);
+  font-weight: bold;
+  /*
+  font-family: Russo One;
+  font-size: 1rem;
+  color: black; */
+}
+.toolbar svg{
+  margin: 0 5px;
+  fill:var(--seconday-bg-color)
+}
+.editor-container {
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+  max-width: 90%;
+  width: 600px;
 }
 
 textarea#editor {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
-  padding: 10px;
   font-size: 16px;
+  width: 100%;
+  height: 250px;
+  border: 1px solid var(--primary-color);
+  padding-left: 5px;
+  padding-top: 5px;
+  background-color: var(--seconday-bg-color);
 }
-
+.preview-container {
+  width: 900px;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+  max-width: 90%;
+  border: 1px solid var(--primary-color);
+  
+}
 #preview {
   width: 100%;
-  padding: 20px;
+  height: 100%;
   background-color: #f8f9fa;
-  border: 1px solid #ddd;
   font-size: 16px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--seconday-bg-color);
+  padding: 0 1rem;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  padding: 20px 0;
 }
+
+/* Preview design */
+#preview > *{
+  margin: 20px 0;
+}
+#preview blockquote {
+  border-left: 3px solid #224b4b;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+#preview pre {
+  display: block;
+  overflow: auto;
+  background: white;
+  padding: 5px;
+  line-height: 1.2;
+}
+#preview code {
+  background: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+#preview table {
+  border-collapse: collapse;
+}
+#preview td,
+#preview th {
+  border: 2px solid #224b4b;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* 
+#preview > p > code {
+  padding: 3px;
+}
+
+
+#preview h1 {
+  border-bottom: 2px solid #224b4b;
+}
+#preview h2 {
+  border-bottom: 1px solid #224b4b;
+}
+
+#preview img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+} */
+
