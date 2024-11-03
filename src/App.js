@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <a
         id="github-link"
-        href="https://github.com/Adrien-25/clock_pomodoro.git"
+        href="https://markdownia.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
