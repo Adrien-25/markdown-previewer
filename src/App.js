@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <a
         id="github-link"
-        href="https://markdownia.netlify.app/"
+        href="https://github.com/Adrien-25/markdown-previewer"
         target="_blank"
         rel="noopener noreferrer"
       >
