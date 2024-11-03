@@ -1,6 +1,6 @@
 :root {
   --primary-color: #432818;
-  --secondary-color: #bb9457;
+  --secondary-color: #735c37;
   --primary-bg-color: #6f1d1b;
   --seconday-bg-color: #ffe6a7;
   --text-color: #99582a;
@@ -39,9 +39,9 @@ ol {
   font-size: 1rem;
   color: black; */
 }
-.toolbar svg{
+.toolbar svg {
   margin: 0 5px;
-  fill:var(--seconday-bg-color)
+  fill: var(--seconday-bg-color);
 }
 .editor-container {
   margin: 20px 0;
@@ -65,7 +65,6 @@ textarea#editor {
   box-shadow: 0px 0px 10px var(--secondary-color);
   max-width: 90%;
   border: 1px solid var(--primary-color);
-  
 }
 #preview {
   width: 100%;
@@ -83,7 +82,7 @@ h1 {
 }
 
 /* Preview design */
-#preview > *{
+#preview > * {
   margin: 20px 0;
 }
 #preview blockquote {
@@ -132,3 +131,51 @@ h1 {
   margin: 2rem auto;
 } */
 
+
+#github-link {
+  border-radius: 10px;
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid white;
+  gap: 10px;
+  background-color: white;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#github-link svg {
+  transition: all 0.3s;
+  fill: #1e1e1e;
+}
+#github-link:hover {
+  color: white;
+  background-color: transparent;
+}
+#github-link:hover svg {
+  fill: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .App{
+    padding-top: 50px;
+  }
+  #github-link {
+    padding: 10px 15px;
+
+  }
+  #github-link svg{
+    width: 20px;
+    height: 20px;
+  }
+  #github-link > span{
+    display: none;
+  }
+}
